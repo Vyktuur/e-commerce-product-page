@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Victor Reis">
+  <meta name="description"
+    content="A responsive, e-commerce product page built to attend the challenge by Frontend Mentor, using HTML, CSS and Javascript">
+  <meta name="keywords"
+    content="html, css, javascript, e-commerce, product, page, challenge, frontend mentor, frontend, web developer, responsive, mobile first">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js" defer></script>
+  <title>E-commerce product page challenge by Frontend Mentor</title>
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="top-header-left">
+      <button class="nav-btn">
+        <img src="images/icon-menu.svg" alt="icon-menu.svg">
+      </button>
+
+      <a class="logo" href="index.html">
+        <img src="./images/logo.svg" alt="logo.svg">
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <div class="main-nav-content-container">
+          <button class="main-nav-close-btn"><span class="icon icon-close"></span></button>
+          <ul class="nav-links">
+            <li>
+              <a href="#collection" class="nav-item">Collections</a>
+            </li>
+            <li>
+              <a href="#men" class="nav-item">Men</a>
+            </li>
+            <li>
+              <a href="#women" class="nav-item">Women</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-item">About</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-item">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="top-header-right">
+      <button class="btn-cart">
+        <span class="icon icon-cart"></span>
+        <span class="items-quantity">
+          <span class="value">0</span><span></span>
+        </span>
+      </button>
+      <button class="user-container">
+        <img src="images/image-avatar.png" alt="avatar.png">
+      </button>
+    </div>
+
+    <section class="cart-section" id="cart-section">
+      <h3 class="cart-section-title">Cart</h3>
+      <div class="cart-section-body">
+        <p class="empty-msg">Your cart is empty.</p>
+        <ul class="cart-section-products"></ul>
+        <button class="btn-checkout">Checkout</button>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <article class="product">
+      <section class="product-slider default-container">
+        <button class="btn-close-lightbox">
+          <span class="icon icon-close"></span>
+        </button>
+        <div class="image-box">
+          <button class="btn-previousImage">
+            <span class="icon icon-previous"></span>
+          </button>
+          <button class="btn-nextImage">
+            <span class="icon icon-next"></span>
+          </button>
+          <img src="images/image-product-1.jpg" alt="Brown and white sneaker" class="image-box__src"
+            data-product-id="item-cart-1" tabindex="0">
+        </div>
+
+        <ul class="product__thumbs default-container" aria-label="Product thumbnails">
+          <li class="thumb-item">
+            <button type="button" class="thumb-item__btn" aria-label="change to image 1">
+              <img src="images/image-product-1-thumbnail.jpg" alt="" data-thumb-index="0" role="presentation">
+            </button>
+          </li>
+          <li class="thumb-item">
+            <button type="button" class="thumb-item__btn" aria-label="change to image 2">
+              <img src="images/image-product-2-thumbnail.jpg" alt="" data-thumb-index="1" role="presentation">
+            </button>
+          </li>
+          <li class="thumb-item">
+            <button type="button" class="thumb-item__btn" aria-label="change to image 3">
+              <img src="images/image-product-3-thumbnail.jpg" alt="" data-thumb-index="2" role="presentation">
+            </button>
+          </li>
+          <li class="thumb-item">
+            <button type="button" class="thumb-item__btn" aria-label="change to image 4">
+              <img src="images/image-product-4-thumbnail.jpg" alt="" data-thumb-index="3" role="presentation">
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="product__content default-container" aria-label="Product content">
+        <header>
+          <h2 class="company-name">Sneaker Company</h2>
+          <p class="product__name">Autumn Limited Edition Sneakers</p>
+          <h3 class="product__title">Fall Limited Edition Sneakers</h3>
+        </header>
+        <p class="product__description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="product__price">
+          <div class="discount-price">
+            <p class="discount-price__value">
+              &dollar;125.00
+              <span class="sr-only">dollars</span>
+            </p>
+            <p class="discount-price__discount">50%</p>
+          </div>
+          <div class="full-price">
+            <p tabindex="0">
+              &dollar;250.00
+              <span class="sr-only">dollars</span>
+            </p>
+          </div>
+        </div>
+
+        <form action="#" class="cart-form">
+          <div class="cart-form__input-container">
+            <button type="button" class="btn-changeValue minus-item">
+              <span class="icon icon-minus"></span>
+            </button>
+            <label for="product__quantity" class="sr-only">Set the quantity manually</label>
+            <input type="number" min="0" value="0" id="product__quantity">
+            <button type="button" class="btn-changeValue plus-item">
+              <span class="icon icon-plus"></span>
+            </button>
+          </div>
+          <button type="button" class="cart-form__add-btn">
+            <span class="icon icon-cart"></span>
+            Add to cart
+          </button>
+        </form>
+      </section>
+    </article>
+  </main>
+  <div class="attribution">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io">Frontend Mentor</a>
+      <br>
+      Coded by <a href="https://github.com/Vyktuur" title="Victor">Vyktuur</a> 😁
+    </p>
+  </div>
+  <div class="lightbox" id="lightbox" role="dialog"></div>
+</body>
+
+</html>
