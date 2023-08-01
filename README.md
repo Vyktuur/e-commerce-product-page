@@ -1,5 +1,4 @@
 # E-commerce product page solution
-![desktop-preview](https://user-images.githubusercontent.com/51066402/146081920-58d6684e-1dd3-4954-9a97-d56d128c7b3b.jpg)
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
 
